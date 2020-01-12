@@ -300,7 +300,7 @@ def main():
                 plane=plane, voltage=round(voltage, 2)))
 
 def checkcpu():
-    cpunotsupported = ("Intel(R) Core(TM) i5-3337U CPU @ 1.80GHz",)
+    cpunotsupported = ("Intel(R) Core(TM) i5-3337U",)
     cpuinfo_f = open('/proc/cpuinfo', 'r')
     cpuinfo = cpuinfo_f.read()
     if cpunotsupported in cpuinfo:
