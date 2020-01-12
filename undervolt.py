@@ -299,5 +299,12 @@ def main():
             print('{plane}: {voltage} mV'.format(
                 plane=plane, voltage=round(voltage, 2)))
 
+cpunotsupported = ("Intel(R) Core(TM) i5-3337U CPU @ 1.80GHz",)
+cpuinfo_f = open('/proc/cpuinfo', 'r')
+cpuinfo = cpuinfo_f.read()
+if cpunotsupported in cpuinfo:
+    print("CPU model not supported!")
+    sys.exit()
+
 if __name__ == '__main__':
     main()
